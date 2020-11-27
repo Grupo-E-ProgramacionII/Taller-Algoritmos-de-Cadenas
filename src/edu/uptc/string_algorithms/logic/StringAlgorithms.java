@@ -8,38 +8,42 @@ public class StringAlgorithms {
 	private final static String CHARACTERS = "Sogamoso ciudad del sol y del acero";
 
 	/**
-	 * Método que encripta una cadena de caracteres.
+	 * Metodo que encripta una cadena de caracteres.
+	 * @param str La cadena que será encriptada.
 	 * @return La cadena de entrada encriptada.
 	 */
-	public static String encryptCharacters() {
-		char array[] = CHARACTERS.toCharArray();
+	public static String encryptCharacters(String str) {
+		char array[] = str.toCharArray();
 
 		for (int i = 0; i < array.length; i++) {
 
 			array[i] = (char) (array[i] + (char) 93);
 
 		}
-		return String.valueOf(array);
+		String result = String.valueOf(array);
+		return result;
 
 	}
 
 	/**
-	 * Método que desencripta una cadena encriptada.
+	 * Metodo que desencripta una cadena encriptada.
+	 * @param strEncrypt  La cadena que se quiere desencriptar.
 	 * @return La cadena de entrada desencriptada.
 	 */
-	public static String decryptCharacters() {
+	public static String decryptCharacters(String strEncrypt) {
 
-		char arrayDecrypt[] = encryptCharacters().toCharArray();
+		char arrayDecrypt[] = strEncrypt.toCharArray();
 
 		for (int i = 0; i < arrayDecrypt.length; i++) {
 
 			arrayDecrypt[i] = (char) (arrayDecrypt[i] - (char) 93);
 		}
-		return String.valueOf(arrayDecrypt);
+		String resultDecrypt = String.valueOf(arrayDecrypt); 
+		return resultDecrypt;
 	}
 
 	/**
-	 * Método que concatena una cadena determinada, un número de veces por izquierda o derecha.
+	 * Metodo que concatena una cadena determinada, un numero de veces por izquierda o derecha.
 	 * @param character El caracter que se va a imprimir.
 	 * @param number El número de veces que se va imprimir e.
 	 * @param side   El lado en el que se va a imprimir la letra (izquierdo-derecho).
@@ -67,7 +71,7 @@ public class StringAlgorithms {
 	}
 
 	/**
-	 * Método que evalua una cadena de entrada y resta los caracteres que comparta con la cadena original.
+	 * Metodo que evalua una cadena de entrada y resta los caracteres que comparta con la cadena original.
 	 * @param stCharacter La cadena de caracteres de entrada.
 	 * @return La diferencia de caracteres de la cadena original con la de entrada.
 	 */
