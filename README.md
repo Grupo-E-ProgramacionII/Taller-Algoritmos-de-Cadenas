@@ -1,5 +1,5 @@
 # Taller Algoritmos de Cadenas
 
-##Programación II - UPTC
+## Programación II - U
 
 Taller para Programación II - UPTC
