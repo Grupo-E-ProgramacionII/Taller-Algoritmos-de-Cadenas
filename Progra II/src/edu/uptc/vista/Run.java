@@ -39,8 +39,8 @@ public class Run {
                 case 3:
                     System.out.println("INGRESE UNA FECHA CON FORMATO DÍA MES AÑO");
                     String date = scanner.next();
-                    //System.out.println(run.stringAlgorithmsV1.turnToDate(date));
-                    run.stringAlgorithmsV1.changeToDate(date);
+                    System.out.println(run.stringAlgorithmsV1.turnToDate(date));
+                    //run.stringAlgorithmsV1.changeToDate(date);
                     break;
 
                 default:
