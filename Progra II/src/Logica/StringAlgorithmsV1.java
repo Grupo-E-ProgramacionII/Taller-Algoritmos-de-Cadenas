@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class StringAlgorithmsV1 {
-    /*
+    /**
         *CONSTANTES:
         * se toma la cadena sogamoso ciudad del sol y del acero
      */
@@ -19,7 +19,7 @@ public class StringAlgorithmsV1 {
     public StringAlgorithmsV1(){
 
     }
-    /*
+    /**
     Metodo para convertir a nombre propio
     @return devuelve la cadena convertida a nombre propio
      */
@@ -45,7 +45,7 @@ public class StringAlgorithmsV1 {
         return  new String(characters);
 
     }
-    /*
+    /**
     *metodo para eliminar un caracter ingresado ignorando mayúsculas  y minúsculas
     *@param caracterToDelete caracter para eliminar
     *@return devuelve la cadena con el caracter eliminado
@@ -70,7 +70,7 @@ public class StringAlgorithmsV1 {
 
 
     }
-    /*
+    /**
     *metodo que convierte un string a un objeto Date, teniendo en cuenta el separador (/o-) y con formato día /mes/año
     * @param input recibe la cadena con formato fecha
     * @return devuelve un objeto Date
@@ -100,22 +100,29 @@ public class StringAlgorithmsV1 {
         }
         return null;
     }
-    public void changeToDate(String input){
+    public Calendar changeToDate(String input){
         int year= 0;
         int month = 0;
         int day = 0;
 
-        if (input.charAt(2)== '-' || input.charAt(3)=='-'){
+        if (input.charAt(4)== '-' ){
             String[] parts = input.split("-");
-            if (Integer.parseInt(parts[0]) <=12) {
-                day = Integer.parseInt(parts[0]);
-                for (int i = 0; i < parts.length; i++) {
-                    System.out.println("parte: " + (i + 1) + "__" + parts[i]);
-                }
-            }
+            day = Integer.valueOf(parts[0]);
+            month = Integer.valueOf(parts[1]);
+            year = Integer.valueOf(parts[2]);
+            Calendar calendar = new GregorianCalendar(year,month,day);
+            return calendar;
 
+
+        }else if (input.charAt(4)=='/'){
+            String parts[] = input.split("/");
+            day = Integer.valueOf(parts[0]);
+            month = Integer.valueOf(parts[1]);
+            year = Integer.valueOf(parts[2]);
+            Calendar calendar = new GregorianCalendar(year,month,day);
+            return calendar;
         }
-       // return  null;
+        return null;
     }
 
 
