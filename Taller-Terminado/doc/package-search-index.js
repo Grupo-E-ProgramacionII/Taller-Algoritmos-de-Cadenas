@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"edu.uptc.string_algorithms.logic"},{"l":"edu.uptc.string_algorithms.view"}]
